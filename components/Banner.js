@@ -1,4 +1,5 @@
 import React from "react";
+import Search from "./Search";
 
 const Banner = () => {
   return (
@@ -10,9 +11,7 @@ const Banner = () => {
             Access all information regarding your crypto
           </p>
         </div>
-        <div className="bg-gray-500 h-64 rounded-lg">
-          <h1>Something here</h1>
-        </div>
+        <Search />
       </div>
     </div>
   );
