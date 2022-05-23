@@ -11,10 +11,12 @@
   "dependencies": {
     "@headlessui/react": "^1.6.2",
     "axios": "^0.27.2",
+    "chart.js": "^3.7.1",
     "next": "12.1.6",
     "react": "18.1.0",
     "react-alice-carousel": "^2.6.1",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "recharts": "^2.1.10"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
