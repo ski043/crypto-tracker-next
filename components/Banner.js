@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "./Search";
 
-const Banner = () => {
+const Banner = ({ data }) => {
   return (
     <div className="w-full ">
       <div className="container mx-auto">

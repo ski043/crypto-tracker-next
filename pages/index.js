@@ -10,7 +10,7 @@ const index = ({ data }) => {
   return (
     <div className="w-full min-h-screen bg-gray-200">
       <Navbar />
-      <Banner />
+      <Banner data={data} />
       <div className="container mx-auto px-6">
         <div className="flex bg-teal-500 text-white text-lg font-normal p-4 rounded-lg mt-16">
           <h3 className="basis-1/2">Coin</h3>

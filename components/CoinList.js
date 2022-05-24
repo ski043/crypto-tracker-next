@@ -20,7 +20,7 @@ const CoinList = ({
           </div>
         </div>
         <div className="basis-1/6">
-          <h3>{current_price} €</h3>
+          <h3>{current_price.toLocaleString()} €</h3>
         </div>
         <div className="basis-1/6">
           {price_change_percentage_24h >= 0 ? (
@@ -34,7 +34,7 @@ const CoinList = ({
           )}
         </div>
         <div className="basis-1/6">
-          <h3>{market_cap} €</h3>
+          <h3>{market_cap.toLocaleString()} €</h3>
         </div>
       </div>
       <div className="w-full h-0.5 bg-gray-300"></div>

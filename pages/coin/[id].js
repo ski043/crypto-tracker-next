@@ -56,13 +56,14 @@ const data = [
   },
 ];
 
-const id = ({ coin }) => {
+const id = ({ coin, chart }) => {
   const text = coin.description.en;
   const description = text.split(".")[0];
+  console.log("data", chart);
   return (
     <div className="min-h-screen bg-gray-200">
       <Navbar />
-      <div className="flex">
+      <div className="flex mt-20">
         <div className="basis-1/4  flex flex-col px-8 border-r-2 border-gray-300">
           <div className="w-full flex justify-center">
             <Image src={coin.image.large} alt="" width={200} height={200} />
@@ -124,11 +125,12 @@ export async function getServerSideProps(context) {
   const res = await fetch(`https://api.coingecko.com/api/v3/coins/${id}`);
   const data = await res.json();
   const url = await fetch(
-    `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=eur&days=30`
+    `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=eur&days=5`
   );
   const chart = await url.json();
+  console.log(chart);
   return {
-    props: { coin: data }, // will be passed to the page component as props
+    props: { coin: data, chart }, // will be passed to the page component as props
   };
 }
 
